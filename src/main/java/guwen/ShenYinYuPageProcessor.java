@@ -13,11 +13,18 @@ public class ShenYinYuPageProcessor implements PageProcessor {
 
     private String bookName;
 
+    private String chapter;
+
     public ShenYinYuPageProcessor(String bookName) {
         this.bookName = bookName;
     }
 
-    private Site site = Site.me().setRetryTimes(3).setSleepTime(100);
+    public ShenYinYuPageProcessor(String bookName, String chapter) {
+        this.bookName = bookName;
+        this.chapter = chapter;
+    }
+
+    private final Site site = Site.me().setRetryTimes(3).setSleepTime(100);
 
     @Override
     public void process(Page page) {
@@ -44,6 +51,7 @@ public class ShenYinYuPageProcessor implements PageProcessor {
             page.putField("title", StringUtils.isBlank(title) ? "" : title);
             page.putField("author", StringUtils.isBlank(author) ? "" : author);
             page.putField("content", content.isEmpty() ? Collections.emptyList() : content);
+            page.putField("chapter",chapter);
             page.putField("flag", 2);
         }
     }

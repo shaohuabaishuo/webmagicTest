@@ -11,18 +11,20 @@ public class ShenYinYuPipeline implements Pipeline {
     public void process(ResultItems resultItems, Task task) {
         Integer flag = resultItems.get("flag");
 
-        switch (flag){
+        switch (flag) {
             case 0:
-                String bookName =resultItems.get("bookName").toString();
-                System.out.println("书名："+bookName);
+                String bookName = resultItems.get("bookName").toString();
+                System.out.println("书名：" + bookName);
                 break;
             case 2:
                 String title = resultItems.get("title").toString();
                 String author = resultItems.get("author").toString();
+//                if(title.equals(resultItems.get("chapter").toString())){
                 List<String> content = resultItems.get("content");
                 System.out.println("标题：" + title);
                 System.out.println("作者：" + author);
                 content.forEach(System.out::println);
+//                }
                 break;
             default:
                 break;
