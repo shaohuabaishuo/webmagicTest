@@ -4,6 +4,7 @@ import us.codecraft.webmagic.ResultItems;
 import us.codecraft.webmagic.Task;
 import us.codecraft.webmagic.pipeline.Pipeline;
 
+import java.util.Comparator;
 import java.util.List;
 
 public class ShenYinYuPipeline implements Pipeline {
@@ -18,12 +19,19 @@ public class ShenYinYuPipeline implements Pipeline {
                 break;
             case 2:
                 String title = resultItems.get("title").toString();
+//                System.out.println(title);
                 String author = resultItems.get("author").toString();
-//                if(title.equals(resultItems.get("chapter").toString())){
-                List<String> content = resultItems.get("content");
-                System.out.println("标题：" + title);
-                System.out.println("作者：" + author);
-                content.forEach(System.out::println);
+//                if (title.contains(resultItems.get("chapter").toString())) {
+                    List<String> content = resultItems.get("content");
+                    System.out.println("标题：" + title);
+                    System.out.println("作者：" + author);
+                    content.forEach(item -> {
+                        String[] split = item.split("。");
+                        for (int i = 0; i < split.length; i++) {
+                            System.out.println(split[i]);
+                        }
+                    });
+//                    content.forEach(System.out::println);
 //                }
                 break;
             default:

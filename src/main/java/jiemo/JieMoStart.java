@@ -1,12 +1,6 @@
 package jiemo;
 
-import huobi.BuyDetail;
-import huobi.HuobiPageProcessor;
-import huobi.HuobiPipeline;
 import us.codecraft.webmagic.Spider;
-
-import java.math.BigDecimal;
-import java.util.Arrays;
 
 public class JieMoStart {
     public static void main(String[] args) {

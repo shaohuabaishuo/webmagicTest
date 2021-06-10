@@ -28,12 +28,17 @@ public class ShenYinYuPageProcessor implements PageProcessor {
 
     @Override
     public void process(Page page) {
-        System.out.println(page.getUrl());
+//        System.out.println(page.getUrl());
         if (page.getUrl().get().equals("http://shiwens.com/search.html?k=" + bookName)) {
             page.putField("bookName", page.getHtml().xpath("//*[@id=\"txtKey\"]/@value"));
             page.putField("nextUtl", page.getHtml().xpath("//div[@class='cont']/h1/a[@target='_blank']/@href"));
             page.putField("flag", 0);
-            String requestUrl = "http://shiwens.com/" + page.getHtml().xpath("//div[@class='cont']/h1/a[@target='_blank']/@href");
+            List<String> all = page.getHtml().xpath("//div[@class='cont']/h1/a[@target='_blank']/@href").all();
+            String url=all.get(0);
+            if(all.size()>1){
+                url=all.get(1);
+            }
+            String requestUrl = "http://shiwens.com/" + url;
             page.addTargetRequest(requestUrl);
         } else if (page.getUrl().get().contains("book_")) {
             List<String> nextUrl = new ArrayList<>();
@@ -48,6 +53,9 @@ public class ShenYinYuPageProcessor implements PageProcessor {
             String title = page.getHtml().xpath("//h1//span/b/text()").toString();
             String author = page.getHtml().xpath("//p[@class='source']//text()").toString();
             List<String> content = page.getHtml().xpath("//div[@class='contson']//p/text()").all();
+            if(content==null||content.size()==0){
+                content=page.getHtml().xpath("//div[@class='contson']//text()").all();
+            }
             page.putField("title", StringUtils.isBlank(title) ? "" : title);
             page.putField("author", StringUtils.isBlank(author) ? "" : author);
             page.putField("content", content.isEmpty() ? Collections.emptyList() : content);
