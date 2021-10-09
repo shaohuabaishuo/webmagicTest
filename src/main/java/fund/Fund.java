@@ -1,6 +1,7 @@
 package fund;
 
-import jdk.nashorn.internal.objects.annotations.Setter;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.time.LocalDateTime;
 
@@ -22,7 +23,8 @@ import java.time.LocalDateTime;
  *     "ZJL":"--"
  * }
  */
-
+@Setter
+@Getter
 public class Fund {
     //最新的净值日期
     private LocalDateTime PDATE;

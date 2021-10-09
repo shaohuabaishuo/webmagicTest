@@ -21,7 +21,7 @@ public class ShenYinYuPipeline implements Pipeline {
                 String title = resultItems.get("title").toString();
 //                System.out.println(title);
                 String author = resultItems.get("author").toString();
-//                if (title.contains(resultItems.get("chapter").toString())) {
+                if (title.contains(resultItems.get("chapter").toString())) {
                     List<String> content = resultItems.get("content");
                     System.out.println("标题：" + title);
                     System.out.println("作者：" + author);
@@ -31,8 +31,9 @@ public class ShenYinYuPipeline implements Pipeline {
                             System.out.println(split[i]);
                         }
                     });
-//                    content.forEach(System.out::println);
-//                }
+                ShenYinYuStart.list.put(title,content);
+                    content.forEach(System.out::println);
+                }
                 break;
             default:
                 break;
