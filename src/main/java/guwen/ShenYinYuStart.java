@@ -10,27 +10,33 @@ public class ShenYinYuStart {
     public static Map<String, List<String>> list = new HashMap<>();
 
     public static void main(String[] args) {
-//        getBook("呻吟语","");
+//        getBook("呻吟语","谈道");
 //        getBook("坛经","");
 //        getBook("大学","");
 //        getBook("大学章句集注");
 //        getBook("中庸","");
-//        getBook("孟子","万章");
-//        getBook("传习录","");
+//        getBook("孟子","公孙丑");
+//        getBook("传习录","陆");
 //        getBook("商君书","王霸");
 //        getBook("尚书", "说命");
 //        getBook("金刚经","");
 //        getBook("老子", "");
 //        getBook("楞严经","");
 //        getBook("庄子","人间");
-        getBook("楚辞","九");
+//        getBook("楚辞","九");
 //        getBook("韩非","");
-//        getBook("论语","");
+//        getBook("论语","里仁");
 //        getBook("易传","");
 //        getBook("周易","");
-//        getBook("荀子","");
+//        getBook("荀子","宥坐");
+//        getBook("荀子","子道");
+//        getBook("荀子","君子");
 //        getBook("礼记","");
-//        getBook("资治通鉴","");
+//        getBook("资治通鉴","唐纪");
+//        getBook("史记","项羽");
+//        getBook("国语","");
+//        getBook("四书集注","");
+        getBook("韩非子","解老");
         /*try {
             Thread.sleep(40000);
             List<String> collect = list.keySet().stream().sorted(new Comparator<String>() {

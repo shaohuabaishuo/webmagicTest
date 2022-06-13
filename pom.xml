@@ -66,5 +66,29 @@
           <artifactId>fastjson</artifactId>
           <version>1.2.72</version>
       </dependency>
+      <dependency>
+          <groupId>org.jruby</groupId>
+          <artifactId>jruby-core</artifactId>
+          <version>9.2.11.1</version>
+      </dependency>
+
+
+
+      <!--netty相关-->
+      <!-- https://mvnrepository.com/artifact/io.netty/netty-all -->
+      <dependency>
+          <groupId>io.netty</groupId>
+          <artifactId>netty-all</artifactId>
+          <version>4.1.76.Final</version>
+      </dependency>
+
+      <!-- https://mvnrepository.com/artifact/io.netty/netty-example -->
+      <dependency>
+          <groupId>io.netty</groupId>
+          <artifactId>netty-example</artifactId>
+          <version>4.1.76.Final</version>
+      </dependency>
+
+
   </dependencies>
 </project>
