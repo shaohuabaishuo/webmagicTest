@@ -15,8 +15,8 @@ public class ShenYinYuStart {
 //        getBook("大学","");
 //        getBook("大学章句集注");
 //        getBook("中庸","");
-//        getBook("孟子","公孙丑");
-//        getBook("传习录","陆");
+//        getBook("孟子","告子");
+//        getBook("传习录","黄省");
 //        getBook("商君书","王霸");
 //        getBook("尚书", "说命");
 //        getBook("金刚经","");
@@ -30,13 +30,13 @@ public class ShenYinYuStart {
 //        getBook("周易","");
 //        getBook("荀子","宥坐");
 //        getBook("荀子","子道");
-//        getBook("荀子","君子");
+//        getBook("荀子","性恶");
 //        getBook("礼记","");
 //        getBook("资治通鉴","唐纪");
-//        getBook("史记","项羽");
+        getBook("史记","仲尼");
 //        getBook("国语","");
 //        getBook("四书集注","");
-        getBook("韩非子","解老");
+//        getBook("韩非子","解老");
         /*try {
             Thread.sleep(40000);
             List<String> collect = list.keySet().stream().sorted(new Comparator<String>() {
