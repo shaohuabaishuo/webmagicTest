@@ -55,12 +55,13 @@ public class ChinaBookProcessor implements PageProcessor {
             Html html = new Html(chapterLabel);
             String chapterAddress = html.xpath("/html/body/a/@href").get();
             String chapter = html.xpath("/html/body/a/@title").get();
-            if (chapter.contains(this.chapter)) {
+            System.out.println("章节名:"+chapter);
+            if (chapter.equals(this.chapter)) {
                 page.addTargetRequest(chapterAddress);
+                page.putField("chapter", chapter);
             }
         }
         page.putField("bookName", bookName);
-        page.putField("chapter", chapter);
         searchTypeEnum = SearchTypeEnum.CHAPTER_NAME;
     }
 

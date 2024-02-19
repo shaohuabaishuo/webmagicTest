@@ -18,7 +18,11 @@ public class ChinaBookPipeline implements Pipeline {
             Object chapter = resultItems.get("chapter");
             System.out.println("\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t" + "\033[1;32m" + bookName + "\t\t" + chapter + "\033[1;0m");
             for (String str : contentList) {
-                System.out.println(str);
+                String[] split = str.split("。");
+                for (String s : split) {
+                    System.out.println(s);
+                }
+
             }
         }
     }

@@ -16,7 +16,7 @@ public class ChinaBookStart {
     public static Map<String, List<String>> list = new HashMap<>();
 
     public static void main(String[] args) {
-        getBook("孟子", "告子");
+        getBook("荀子", "王霸篇第十一");
     }
 
 
