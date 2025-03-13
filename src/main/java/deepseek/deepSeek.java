@@ -12,8 +12,7 @@ import java.net.URL;
 
 public class deepSeek {
     private static final String API_URL = "https://api.deepseek.com/v1/chat/completions";
-    //sk-7dee0b6e34044f7da0d3df13712d0122
-    private static final String API_KEY = "sk-7dee0b6e34044f7da0d3df13712d0122";
+    private static final String API_KEY = "";
 
     public static String sendRequest(String prompt) {
         try {
